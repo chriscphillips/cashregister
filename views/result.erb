@@ -1,0 +1,30 @@
+<center>
+<script src= "/js/getdate.js"> 
+</script>
+<p id="date"> </p>
+<body>
+<img  alt="register1" src="/img/register1.jfif" align="left" width="225" height="225">
+<img  alt="register2" src="/img/register2.jfif" align="right" width="225" height="225">	
+<br>
+<% book_name = isbn(isbn) %>
+The book you are looking for is: <%= book_name %>
+<br>
+<% location = isbn_photo(isbn) %>
+<br>
+<img src = <%= location %>  style="width: 18%;" align="middle";>
+<br>
+<br>
+<br>
+Continue Shopping
+<a href='//localhost:4567'>Go!</a>
+<br>
+<br>
+<br>
+<br>
+<img alt="register3" src="/img/register3.jfif"  align="left" width="225" height="225">
+<img alt="register4" src="/img/register4.jfif"  align="right" width="225" height="225">
+</center>
+</body>
+<script>
+window.onload=getOrderDate('date');
+</script>

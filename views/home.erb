@@ -1,0 +1,30 @@
+<center>
+<script src= "/js/getdate.js"> 
+</script>
+<p id="date"> </p>
+<head>
+<title> Welcome to Fine Grocery Shopping</title>
+<link href="<%= url('/css/main.css') %>" rel= "stylesheet" type="text/css" />
+</head>
+<body>
+<img  alt="register1" src="/img/register1.jfif"  align="left" width="225" height="225">
+<img  alt="register2" src="/img/register2.jfif"  align="right" width="225" height="225">
+<br>
+Welcome to Fine Grocery Shopping
+<br><br>
+Select Grocery
+<br><br>
+<img alt="oldstore" src="/img/oldstore.jfif" width="263" height="192"/>
+<br><br><br>
+<form method="post" action="food_choice">
+   <input type="radio"  name="food" value="Grocery"> Grocery <br>
+    <input type= "submit">
+</form>
+<br><br><br><br><br><br>
+<<img  alt="register3" src="/img/register3.jfif"  align="left" width="225" height="225">
+<img alt="register4" src="/img/register4.jfif"  align="right" width="225" height="225">
+</center>
+</body>
+<script>
+	window.onload=getOrderDate('date');
+</script>
