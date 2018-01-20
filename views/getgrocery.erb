@@ -1,0 +1,37 @@
+<center>
+<script src= "/js/getdate.js"> 
+</script>
+<p id="date"> </p>
+<head>
+<title>Cash Register</title>
+<link href="<%= url('/css/main.css') %>" rel= "stylesheet" type="text/css" />
+</head>
+<body>
+Select groceries you want to purchase.
+<br>
+<form method="post" action="food_choice">
+<input type="hidden" name="tuna" value="f" id="Lite Tuna"> 
+ <input type="checkbox" name="tuna" value="t" id="Lite Tuna"><label for="tuna"> Lite Tuna</label><br> 
+<input type="hidden" name="goldfish" value="f" id="Goldfish"> 
+<input type="checkbox" name="goldfish" value="t" id="Goldfish"><label for="goldfish"> Goldfish</label><br> 
+<input type="hidden" name="beans" value="f" id="Pinto Beans">
+<input type="checkbox" name="beans" value="t" id="Pinto Beans"><label for="beans"> Pinto Beans</label><br>
+ <input type="hidden" name="pepperoni" value="f" id="Pepperoni">
+ <input type="checkbox" name="pepperoni" value="t" id="Pepperoni"><label for="pepperoni"> Pepperoni</label> <br>
+ <input type="hidden" name="milk" value="f" id="Milk">
+ <input type="checkbox" name="milk" value="t" id="Milk"><label for="pepperoni"> Milk</label> <br>
+ <input type="hidden" name="butter" value="f" id="Buter">
+ <input type="checkbox" name="buter" value="t" id="Butter"><label for="butter"> Butter</label> <br>
+ <input type="hidden" name="cheese" value="f" id="Cheese">
+ <input type="checkbox" name="cheese" value="t" id="Cheese"><label for="cheese"> Cheese</label> <br>
+ <input type="hidden" name="whip topping" value="f" id="Whip Topping">
+ <input type="checkbox" name="whip topping" value="t" id="Whip Topping"><label for="whip topping"> Whip Topping</label> <br>
+<input type="submit" value="Purchase">
+<br>
+<br>
+</form>
+</center>
+</body>
+<script>
+    window.onload=getOrderDate('date');
+</script>
