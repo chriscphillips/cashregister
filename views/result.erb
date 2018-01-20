@@ -10,52 +10,56 @@
 <%
    total = 0
     if tuna == "t"
-    	total = total + grocery("Lite Tuna")
+    	total = total + grocery("Lite Tuna").to_f
     end
 
     if goldfish == "t"
-    	total = total + grocery("Goldfish")
+    	total = total + grocery("Goldfish").to_f
     end
 
        if beans == "t"
-    	total = total + item_name("Pinto Beans")
+    	total = total + grocery("Pinto Beans").to_f
     end
 
     if pepperoni == "t"
-    	total = total + item_name("Pepperoni")
+    	total = total + grocery("Pepperoni").to_f
     end
 
      if milk == "t"
-        total = total + item_name("Milk")
+        total = total + grocery("Milk").to_f
     end
 
      if butter == "t"
-        total = total + item_name("Butter")
+        total = total + grocery("Butter").to_f
     end
 
      if cheese == "t"
-        total = total + item_name("Cheese")
+        total = total + grocery("Cheese").to_f
     end
 
-     if whip topping == "t"
-        total = total + item_name("Whip Topping")
+     if whip_topping == "t"
+        total = total + grocery("Whip_Topping").to_f
     end
    
     %>
     Thank for shopping with us.<br>
     Shopping Cart<br>
 
-   Subtotal is:
-   Tax is:
-   Total is:
 $<%= total.round(2) %>
 <br>
-<br>
-<br>
-Do you want to change your order? If so select Go button
+<% 
+tax = total * 0.06
+total_all = total + tax
+%>
+<br> 
+$<%= tax.round(2) %><br>
+$<%= total_all.round(2) %><br>
+<br><br><br><br><br>
+Do you want to change your order?<br><br> If so select Go button
 <a href='//localhost:4567'>Go!</a>
 </center>
 </body>
+<br><br><br>
 <script>
 window.onload=getOrderDate('date');
 </script>
