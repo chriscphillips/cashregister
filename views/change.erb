@@ -1,0 +1,26 @@
+<center>
+<script src= "/js/getdate.js"> 
+</script>
+<p id="date"> </p>
+<head>
+<title>Cash Register</title>
+<link href="<%= url('/css/main.css') %>" rel= "stylesheet" type="text/css" />
+</head>
+<body>
+<img  alt="register1" src="/img/register1.jfif"  align="left" width="225" height="225">
+<img  alt="register2" src="/img/register2.jfif"  align="right" width="225" height="225">
+<% change = amount.to_f - total_all.to_f %>
+Thank you for shopping with us.
+<br>
+Your Grand Total is:<br>
+    $<%= total_all.to_f.round(2) %>
+You gave me:<br>
+   $<%= amount.to_f.round(2) %>
+Your Change is:<br>
+    $<%= change.to_f.round(2) %>
+    <br><br>
+</center>
+</body>
+<script>
+window.onload=getOrderDate('date');
+</script>

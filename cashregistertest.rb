@@ -18,6 +18,7 @@ class TestBook < Minitest::Test
 	def test_assert_whip_topping_returns_1_dollars_78_cents
 		assert_equal("1.78", grocery("Whip Topping"))
 	end
+
 end
 
 	

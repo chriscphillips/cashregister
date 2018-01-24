@@ -7,6 +7,8 @@
 <link href="<%= url('/css/main.css') %>" rel= "stylesheet" type="text/css" />
 </head>
 <body>
+<img  alt="register1" src="/img/register1.jfif"  align="left" width="225" height="225">
+<img  alt="register2" src="/img/register2.jfif"  align="right" width="225" height="225">
 <%
    total = 0
     if tuna == "t"
@@ -51,10 +53,26 @@ $<%= total.round(2) %>
 tax = total * 0.06
 total_all = total + tax
 %>
-<br> 
+<br>
 $<%= tax.round(2) %><br>
 $<%= total_all.round(2) %><br>
-<br><br><br><br><br>
+<br><br>
+<form method="post" action="payment">
+<input type="integer"  name="amount">
+<input type="hidden" name="tuna" value = <%= tuna %>>
+<input type="hidden" name="goldfish" value = <%= goldfish %>>
+<input type="hidden" name="beans" value = <%= beans %>>
+<input type="hidden" name="pepperoni" value = <%= pepperoni %>>
+<input type="hidden" name="milk" value = <%= milk %>>
+<input type="hidden" name="butter" value= <%= butter %>>
+<input type="hidden" name="cheese" value= <%= cheese %>>
+ <input type="hidden" name="whip_topping" value= <%= whip_topping %>>
+<input type="hidden" name="total" value = <%= total %>>
+<input type="hidden" name="total_all" value = <%= total_all %>>
+    <br>
+    <br>    
+<input type="submit"><br><br>
+</form>
 Do you want to change your order?<br><br> If so select Go button
 <a href='//localhost:4567'>Go!</a>
 </center>
